@@ -1,0 +1,26 @@
+{{ $items := slice
+  (dict "label" "Home" "url" "/")
+  (dict "label" "Content Directory" "url" "/content-directory/")
+  (dict "label" "Calendar of Events" "url" "/calendar-of-events/")
+  (dict "label" "Club Rules" "url" "/club-rules/")
+  (dict "label" "Bird Hunting" "url" "/bird-hunting-safety-rules/")
+  (dict "label" "Membership" "url" "/membership-categories/")
+  (dict "label" "Other Privileges" "url" "/other-hunting-privileges/")
+  (dict "label" "Fields Map" "url" "/fields-map/")
+}}
+<nav class="site-nav" id="site-navigation" data-site-nav data-open="false" aria-label="Primary navigation">
+  <ul class="site-nav__list">
+    {{ range $item := $items }}
+      {{ $active := false }}
+      {{ if eq $item.url "/" }}
+        {{ $active = $.IsHome }}
+      {{ else if hasPrefix $.RelPermalink $item.url }}
+        {{ $active = true }}
+      {{ end }}
+      <li>
+        <a class="{{ if $active }}is-active{{ end }}" href="{{ $item.url }}">{{ $item.label }}</a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>
+

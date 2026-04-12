@@ -1,0 +1,90 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+media_folder: static/images
+public_folder: /images
+
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: Homepage
+        name: home
+        file: content/_index.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Hero Title, name: hero_title, widget: string }
+          - { label: Hero Tagline, name: hero_tagline, widget: text }
+          - { label: Hero CTA Text, name: hero_cta_text, widget: string }
+          - { label: Hero CTA URL, name: hero_cta_url, widget: string }
+          - { label: Mission Body, name: mission_body, widget: markdown }
+          - { label: Privacy Body, name: privacy_body, widget: markdown }
+          - label: Board of Directors
+            name: board_members
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+          - { label: Staff Image 1, name: staff_image_1, widget: image }
+          - { label: Staff Image 2, name: staff_image_2, widget: image }
+          - { label: Body, name: body, widget: markdown, required: false }
+      - label: Content Directory
+        name: content_directory
+        file: content/content-directory.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Calendar of Events
+        name: calendar_of_events
+        file: content/calendar-of-events.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Club Rules
+        name: club_rules
+        file: content/club-rules.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Bird Hunting Safety Rules
+        name: bird_hunting_safety_rules
+        file: content/bird-hunting-safety-rules.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Membership Categories
+        name: membership_categories
+        file: content/membership-categories.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Other Hunting Privileges
+        name: other_hunting_privileges
+        file: content/other-hunting-privileges.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+      - label: Fields Map
+        name: fields_map
+        file: content/fields-map.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Body, name: body, widget: markdown }
+
+  - name: site_settings
+    label: Site Settings
+    files:
+      - label: Settings
+        name: settings
+        file: data/settings.toml
+        format: toml
+        editor:
+          preview: false
+        fields:
+          - { label: Site Name, name: site_name, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Facebook URL, name: facebook_url, widget: string }

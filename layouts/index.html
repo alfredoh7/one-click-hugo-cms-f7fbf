@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ partial "hero.html" . }}
+
+  <section class="home-overview">
+    <div class="container home-overview__stack">
+      {{ partial "mission.html" . }}
+      {{ partial "privacy-statement.html" . }}
+    </div>
+  </section>
+
+  <section class="board-band">
+    <div class="container">
+      {{ partial "board.html" . }}
+    </div>
+  </section>
+
+  <section class="staff-band">
+    <div class="container">
+      {{ partial "staff.html" . }}
+    </div>
+  </section>
+{{ end }}
+

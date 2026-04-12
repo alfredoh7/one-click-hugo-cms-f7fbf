@@ -1,0 +1,53 @@
+{{ $items := slice
+  (dict "label" "Home" "url" "/")
+  (dict "label" "Content Directory" "url" "/content-directory/")
+  (dict "label" "Calendar of Events" "url" "/calendar-of-events/")
+  (dict "label" "Club Rules" "url" "/club-rules/")
+  (dict "label" "Bird Hunting" "url" "/bird-hunting-safety-rules/")
+  (dict "label" "Membership" "url" "/membership-categories/")
+  (dict "label" "Other Privileges" "url" "/other-hunting-privileges/")
+  (dict "label" "Fields Map" "url" "/fields-map/")
+}}
+<footer class="site-footer">
+  <div class="site-footer__main">
+    <div class="container site-footer__grid">
+      <div class="site-footer__brand">
+        <p class="site-footer__eyebrow">Amwell Valley Conservancy</p>
+        <h2>{{ site.Data.settings.site_name | default .Site.Title }}</h2>
+      </div>
+
+      <div>
+        <h3>User Links</h3>
+        <ul class="site-footer__links">
+          {{ range $items }}
+            <li><a href="{{ .url }}">{{ .label }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Contact Information</h3>
+        <ul class="site-footer__contact">
+          <li><a href="tel:{{ replace site.Data.settings.phone "-" "" }}">{{ site.Data.settings.phone }}</a></li>
+          <li>
+            <a href="{{ site.Data.settings.facebook_url }}" target="_blank" rel="noreferrer">
+              <span class="footer-facebook">
+                <svg viewBox="0 0 320 512" aria-hidden="true">
+                  <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
+                </svg>
+              </span>
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__meta">
+    <div class="container">
+      <p>Copyright © 2024 Amwell Valley Conservancy, All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+

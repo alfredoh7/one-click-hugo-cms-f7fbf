@@ -1,0 +1,10 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Amwell Valley Conservancy"
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

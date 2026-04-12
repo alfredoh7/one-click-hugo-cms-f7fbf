@@ -1,0 +1,19 @@
+<section class="board-card">
+  <div class="board-card__heading">
+    <p class="section-kicker">Leadership</p>
+    <h2>AVC Board of Directors</h2>
+  </div>
+
+  <div class="board-table board-table--head">
+    <div>Name</div>
+    <div>Lead Responsibility / Committees</div>
+  </div>
+
+  {{ range .Params.board_members }}
+    <div class="board-table board-table--row">
+      <div>{{ .name }}</div>
+      <div>{{ .role }}</div>
+    </div>
+  {{ end }}
+</section>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {{ if .IsHome }}
+        {{ site.Data.settings.site_name | default .Site.Title }}
+      {{ else }}
+        {{ .Title }} | {{ site.Data.settings.site_name | default .Site.Title }}
+      {{ end }}
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Sarabun:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="{{ if .IsHome }}home{{ else }}interior{{ end }}">
+    {{ partial "header.html" . }}
+    <main id="content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <script>
+      (() => {
+        const toggle = document.querySelector("[data-nav-toggle]");
+        const menu = document.querySelector("[data-site-nav]");
+        if (!toggle || !menu) return;
+
+        const closeMenu = () => {
+          toggle.setAttribute("aria-expanded", "false");
+          menu.dataset.open = "false";
+        };
+
+        toggle.addEventListener("click", () => {
+          const next = toggle.getAttribute("aria-expanded") !== "true";
+          toggle.setAttribute("aria-expanded", String(next));
+          menu.dataset.open = String(next);
+        });
+
+        menu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 940) closeMenu();
+        });
+      })();
+    </script>
+  </body>
+</html>
