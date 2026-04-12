@@ -1,6 +1,9 @@
 {
   "name": "amwell-valley-conservancy",
   "private": true,
+  "dependencies": {
+    "@netlify/identity": "^1.0.0"
+  },
   "scripts": {
     "build": "npx -y hugo-bin -d dist",
     "start": "npx -y hugo-bin server"
