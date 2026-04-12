@@ -1,0 +1,8 @@
+{
+  "name": "amwell-valley-conservancy",
+  "private": true,
+  "scripts": {
+    "build": "npx -y hugo-bin -d dist",
+    "start": "npx -y hugo-bin server"
+  }
+}
