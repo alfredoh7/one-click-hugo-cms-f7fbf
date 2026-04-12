@@ -56,6 +56,112 @@ img.wp-smiley, img.emoji {
   padding: 0 !important;
 }
   </style>
+  <style id="avc-site-gate-css">
+html.avc-gate-locked {
+  background: #102616;
+}
+
+html.avc-gate-locked body {
+  overflow: hidden;
+}
+
+html.avc-gate-locked body > :not(.avc-site-gate) {
+  visibility: hidden;
+}
+
+.avc-site-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(7, 18, 10, 0.96);
+}
+
+html.avc-gate-locked .avc-site-gate {
+  display: flex;
+}
+
+.avc-site-gate__panel {
+  width: min(100%, 420px);
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  background: linear-gradient(180deg, #15331f 0%, #0c1c12 100%);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  color: #ffffff;
+  text-align: center;
+}
+
+.avc-site-gate__panel h1 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.avc-site-gate__panel p {
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.avc-site-gate__label {
+  display: block;
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.avc-site-gate__input {
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.avc-site-gate__input:focus {
+  outline: 2px solid rgba(199, 221, 157, 0.9);
+  outline-offset: 2px;
+}
+
+.avc-site-gate__button {
+  width: 100%;
+  padding: 14px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #c7dd9d;
+  color: #102616;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.avc-site-gate__button:hover {
+  background: #d8e8b9;
+}
+
+.avc-site-gate__button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.avc-site-gate__error {
+  min-height: 1.25rem;
+  margin: 12px 0 0;
+  color: #ffd5d5;
+  font-size: 0.92rem;
+}
+  </style>
   <link rel='stylesheet' id='hello-elementor-css' href='/wp-content/themes/hello-elementor/assets/css/reset.css' media='all' />
   <link rel='stylesheet' id='hello-elementor-theme-style-css' href='/wp-content/themes/hello-elementor/assets/css/theme.css' media='all' />
   <link rel='stylesheet' id='hello-elementor-header-footer-css' href='/wp-content/themes/hello-elementor/assets/css/header-footer.css' media='all' />
@@ -92,10 +198,40 @@ img.wp-smiley, img.emoji {
   <link rel='stylesheet' id='elementor-icons-ekiticons-css' href='/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css' media='all' />
   <link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Sarabun%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap&#038;ver=6.9.4' media='all' />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <script>
+    (() => {
+      if (window.location.pathname.startsWith("/admin")) {
+        document.documentElement.classList.add("avc-gate-open");
+        return;
+      }
+
+      let isUnlocked = false;
+
+      try {
+        isUnlocked = window.localStorage.getItem("avc-site-gate") === "open";
+      } catch (error) {
+        isUnlocked = false;
+      }
+
+      document.documentElement.classList.add(isUnlocked ? "avc-gate-open" : "avc-gate-locked");
+    })();
+  </script>
   <script src="/wp-includes/js/jquery/jquery.min.js" id="jquery-core-js"></script>
   <script src="/wp-includes/js/jquery/jquery-migrate.min.js" id="jquery-migrate-js"></script>
 </head>
 <body class="{{ $bodyClass }}">
+<div class="avc-site-gate" id="avc-site-gate" aria-hidden="true">
+  <div class="avc-site-gate__panel">
+    <h1>Amwell Valley Conservancy</h1>
+    <p>Enter the site password to continue.</p>
+    <form id="avc-site-gate-form">
+      <label class="avc-site-gate__label" for="avc-site-gate-password">Password</label>
+      <input class="avc-site-gate__input" id="avc-site-gate-password" name="password" type="password" autocomplete="current-password" required />
+      <button class="avc-site-gate__button" id="avc-site-gate-submit" type="submit">Enter Site</button>
+      <p class="avc-site-gate__error" id="avc-site-gate-error" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
 <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 {{ partial "header.html" . }}
 <main id="content">
@@ -156,6 +292,75 @@ img.wp-smiley, img.emoji {
 <script src="/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js" id="elementskit-elementor-js"></script>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
+  (() => {
+    if (window.location.pathname.startsWith("/admin")) {
+      return;
+    }
+
+    const hashPassword = async (value) => {
+      const encoded = new TextEncoder().encode(value);
+      const buffer = await window.crypto.subtle.digest("SHA-256", encoded);
+      return Array.from(new Uint8Array(buffer))
+        .map((byte) => byte.toString(16).padStart(2, "0"))
+        .join("");
+    };
+
+    const expectedHash = "63ded13634626cff51639b3e418a08427c0bf60b2afb8a4bc85f47f75940bf85";
+    const root = document.documentElement;
+    const gate = document.getElementById("avc-site-gate");
+    const form = document.getElementById("avc-site-gate-form");
+    const input = document.getElementById("avc-site-gate-password");
+    const submit = document.getElementById("avc-site-gate-submit");
+    const error = document.getElementById("avc-site-gate-error");
+
+    if (!gate || !form || !input || !submit || !error) {
+      return;
+    }
+
+    const unlockSite = () => {
+      root.classList.remove("avc-gate-locked");
+      root.classList.add("avc-gate-open");
+      gate.setAttribute("aria-hidden", "true");
+
+      try {
+        window.localStorage.setItem("avc-site-gate", "open");
+      } catch (storageError) {
+        // Ignore storage errors and keep the page unlocked for this visit.
+      }
+    };
+
+    if (root.classList.contains("avc-gate-open")) {
+      unlockSite();
+      return;
+    }
+
+    gate.setAttribute("aria-hidden", "false");
+    window.setTimeout(() => input.focus(), 0);
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      error.textContent = "";
+      submit.disabled = true;
+
+      try {
+        const enteredHash = await hashPassword(input.value);
+
+        if (enteredHash === expectedHash) {
+          input.value = "";
+          unlockSite();
+          return;
+        }
+
+        error.textContent = "Incorrect password. Please try again.";
+        input.select();
+      } catch (gateError) {
+        error.textContent = "This browser could not verify the password.";
+      } finally {
+        submit.disabled = false;
+      }
+    });
+  })();
+
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", (user) => {
       if (!user) {
