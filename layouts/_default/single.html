@@ -1,21 +1,3 @@
 {{ define "main" }}
-  <section
-    class="page-hero"
-    style="--hero-image: url('/images/2024/09/AVC-Web-Site-Content-working-copy-master-copy.pdf-image-000.png');"
-  >
-    <div class="container">
-      <div class="page-hero__card">
-        <h1>{{ .Title }}</h1>
-      </div>
-    </div>
-  </section>
-
-  <section class="page-shell">
-    <div class="container">
-      <article class="page-card page-content">
-        {{ .Content }}
-      </article>
-    </div>
-  </section>
+  {{ .Content }}
 {{ end }}
-

@@ -1,23 +1,147 @@
 {{ define "main" }}
-  {{ partial "hero.html" . }}
-
-  <section class="home-overview">
-    <div class="container home-overview__stack">
-      {{ partial "mission.html" . }}
-      {{ partial "privacy-statement.html" . }}
-    </div>
-  </section>
-
-  <section class="board-band">
-    <div class="container">
-      {{ partial "board.html" . }}
-    </div>
-  </section>
-
-  <section class="staff-band">
-    <div class="container">
-      {{ partial "staff.html" . }}
-    </div>
-  </section>
+  {{ $privacyParagraphs := split (.Params.privacy_body | default "") "\n\n" }}
+  {{ $privacyLead := "" }}
+  {{ $privacyMiddle := "" }}
+  {{ $privacyTail := "" }}
+  {{ if ge (len $privacyParagraphs) 1 }}{{ $privacyLead = index $privacyParagraphs 0 }}{{ end }}
+  {{ if ge (len $privacyParagraphs) 2 }}{{ $privacyMiddle = index $privacyParagraphs 1 }}{{ end }}
+  {{ if ge (len $privacyParagraphs) 3 }}{{ $privacyTail = index $privacyParagraphs 2 }}{{ end }}
+  {{ $heroCTA := replaceRE "^/" "" (.Params.hero_cta_url | default "calendar-of-events/") }}
+  {{ $staffImage1 := .Params.staff_image_1 | default "wp-content/uploads/2025/03/mike.jpg" }}
+  {{ $staffImage2 := .Params.staff_image_2 | default "wp-content/uploads/2025/08/new-worker.jpg" }}
+  <div data-elementor-type="wp-page" data-elementor-id="283" class="elementor elementor-283" data-elementor-post-type="page">
+				<div class="elementor-element elementor-element-2cf4d88 e-flex e-con-boxed e-con e-parent" data-id="2cf4d88" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-ddb3caa e-con-full e-flex e-con e-child" data-id="ddb3caa" data-element_type="container">
+				<div class="elementor-element elementor-element-b107713 elementor-widget-mobile__width-inherit elementor-widget elementor-widget-heading" data-id="b107713" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h1 class="elementor-heading-title elementor-size-default">{{ .Params.hero_title }}</h1>				</div>
+				</div>
+				<div class="elementor-element elementor-element-b427ff2 elementor-widget elementor-widget-text-editor" data-id="b427ff2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									{{ .Params.hero_tagline }}								</div>
+				</div>
+				<div class="elementor-element elementor-element-7eab759 elementor-align-left elementor-mobile-align-left elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button" data-id="7eab759" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-md" href="{{ $heroCTA }}" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">{{ .Params.hero_cta_text }}</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-2174e5a e-con-full e-flex e-con e-child" data-id="2174e5a" data-element_type="container">
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-fa006c1 e-flex e-con-boxed e-con e-parent" data-id="fa006c1" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-72888e2e e-con-full e-flex e-con e-child" data-id="72888e2e" data-element_type="container">
+				<div class="elementor-element elementor-element-2c1d2ec3 elementor-widget elementor-widget-heading" data-id="2c1d2ec3" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Mission Statement</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-28bb5362 elementor-widget elementor-widget-text-editor" data-id="28bb5362" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									{{ .Params.mission_body | markdownify }}								</div>
+				</div>
+				<div class="elementor-element elementor-element-f11a76d elementor-widget elementor-widget-text-editor" data-id="f11a76d" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									{{ $privacyLead }}								</div>
+				</div>
+				<div class="elementor-element elementor-element-8f8888e elementor-widget elementor-widget-text-editor" data-id="8f8888e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									{{ $privacyMiddle }}								</div>
+				</div>
+				<div class="elementor-element elementor-element-36d1b83 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-text-editor" data-id="36d1b83" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									{{ $privacyTail }}								</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-92056c1 e-con-full e-flex e-con e-child" data-id="92056c1" data-element_type="container">
+				<div class="elementor-element elementor-element-29c5fa3c elementor-widget elementor-widget-image" data-id="29c5fa3c" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img fetchpriority="high" decoding="async" width="640" height="268" src="wp-content/uploads/2025/02/HomePageForAmwell.png" class="attachment-full size-full wp-image-882" alt="" srcset="wp-content/uploads/2025/02/HomePageForAmwell.png 640w, wp-content/uploads/2025/02/HomePageForAmwell-300x126.png 300w" sizes="(max-width: 640px) 100vw, 640px" />															</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c485d8e elementor-hidden-mobile e-flex e-con-boxed e-con e-parent" data-id="c485d8e" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-93c1aa3 e-con-full e-flex e-con e-child" data-id="93c1aa3" data-element_type="container">
+				<div class="elementor-element elementor-element-5c0b5f3 elementor-widget elementor-widget-text-editor" data-id="5c0b5f3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>{{ $privacyTail }}</p>								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-63a33b6 e-flex e-con-boxed e-con e-parent" data-id="63a33b6" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-a07f9a7 e-con-full e-flex e-con e-child" data-id="a07f9a7" data-element_type="container">
+				<div class="elementor-element elementor-element-ed5c293 elementor-widget elementor-widget-heading" data-id="ed5c293" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">AVC Board of Directors</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0b683bc elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0b683bc" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+{{ range .Params.board_members }}							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fas-user" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"></path></svg>						</span>
+										<span class="elementor-icon-list-text">{{ .name }}</span>
+									</li>
+{{ end }}						</ul>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-57ee532 e-con-full e-flex e-con e-child" data-id="57ee532" data-element_type="container">
+				<div class="elementor-element elementor-element-ef6c91d elementor-widget elementor-widget-heading" data-id="ef6c91d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Lead Responsibility / Committees</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-43b4608 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="43b4608" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+{{ range .Params.board_members }}							<li class="elementor-icon-list-item">
+										<span class="elementor-icon-list-text">{{ .role }}</span>
+									</li>
+{{ end }}						</ul>
+						</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-c449983 e-flex e-con-boxed e-con e-parent" data-id="c449983" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-46cd4157 e-flex e-con-boxed e-con e-child" data-id="46cd4157" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-31ed86c7 elementor-widget elementor-widget-heading" data-id="31ed86c7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">AVC Staff and their contact numbers</h2>				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-4e0060ff e-flex e-con-boxed e-con e-child" data-id="4e0060ff" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-17a9d8cf e-con-full e-flex e-con e-child" data-id="17a9d8cf" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-501a0af elementor-widget elementor-widget-image" data-id="501a0af" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="956" height="630" src="{{ $staffImage1 }}" class="attachment-full size-full wp-image-1136" alt="" sizes="(max-width: 956px) 100vw, 956px" />															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-76ce9170 e-con-full e-flex e-con e-child" data-id="76ce9170" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-5dd232b elementor-widget elementor-widget-image" data-id="5dd232b" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img decoding="async" width="934" height="624" src="{{ $staffImage2 }}" class="attachment-full size-full wp-image-1319" alt="" sizes="(max-width: 934px) 100vw, 934px" />															</div>
+				</div>
+				</div>
+					</div>
+				</div>
+					</div>
+				</div>
+				</div>
 {{ end }}
-

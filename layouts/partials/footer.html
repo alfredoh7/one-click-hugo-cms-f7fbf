@@ -1,53 +1,76 @@
-{{ $items := slice
-  (dict "label" "Home" "url" "/")
-  (dict "label" "Content Directory" "url" "/content-directory/")
-  (dict "label" "Calendar of Events" "url" "/calendar-of-events/")
-  (dict "label" "Club Rules" "url" "/club-rules/")
-  (dict "label" "Bird Hunting" "url" "/bird-hunting-safety-rules/")
-  (dict "label" "Membership" "url" "/membership-categories/")
-  (dict "label" "Other Privileges" "url" "/other-hunting-privileges/")
-  (dict "label" "Fields Map" "url" "/fields-map/")
-}}
-<footer class="site-footer">
-  <div class="site-footer__main">
-    <div class="container site-footer__grid">
-      <div class="site-footer__brand">
-        <p class="site-footer__eyebrow">Amwell Valley Conservancy</p>
-        <h2>{{ site.Data.settings.site_name | default .Site.Title }}</h2>
-      </div>
-
-      <div>
-        <h3>User Links</h3>
-        <ul class="site-footer__links">
-          {{ range $items }}
-            <li><a href="{{ .url }}">{{ .label }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
-
-      <div>
-        <h3>Contact Information</h3>
-        <ul class="site-footer__contact">
-          <li><a href="tel:{{ replace site.Data.settings.phone "-" "" }}">{{ site.Data.settings.phone }}</a></li>
-          <li>
-            <a href="{{ site.Data.settings.facebook_url }}" target="_blank" rel="noreferrer">
-              <span class="footer-facebook">
-                <svg viewBox="0 0 320 512" aria-hidden="true">
-                  <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-                </svg>
-              </span>
-              Facebook
-            </a>
-          </li>
-        </ul>
+<div data-elementor-type="footer" data-elementor-id="296" class="elementor elementor-296 elementor-location-footer" data-elementor-post-type="elementor_library">
+  <div class="elementor-element elementor-element-3ba3e085 e-flex e-con-boxed e-con e-parent" data-id="3ba3e085" data-element_type="container" data-settings='{"background_background":"classic"}'>
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-66b98c8f e-con-full e-flex e-con e-child" data-id="66b98c8f" data-element_type="container">
+        <div class="elementor-element elementor-element-71918c94 e-con-full e-flex e-con e-child" data-id="71918c94" data-element_type="container">
+          <div class="elementor-element elementor-element-4042444 elementor-widget elementor-widget-heading" data-id="4042444" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h1 class="elementor-heading-title elementor-size-default">Amwell 
+Valley
+Conservancy</h1>
+            </div>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-37709a48 e-con-full e-flex e-con e-child" data-id="37709a48" data-element_type="container">
+          <div class="elementor-element elementor-element-44b73fd2 elementor-widget elementor-widget-heading" data-id="44b73fd2" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h4 class="elementor-heading-title elementor-size-default">User Links</h4>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-38115f6 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="38115f6" data-element_type="widget" data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+              <ul class="elementor-icon-list-items">
+                <li class="elementor-icon-list-item"><a href="/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Home</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/contents-directory/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Contents Directory</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/calendar-of-events/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Calendar of Events</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/club-rules/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Club Rules</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/bird-hunting-safety-rules/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Bird Hunting</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/membership-categories/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Membership</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/other-hunting-privileges/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Other Privileges</span></a></li>
+                <li class="elementor-icon-list-item"><a href="/fields-map/"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><span class="elementor-icon-list-text">Fields Map</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-703e71ee e-con-full e-flex e-con e-child" data-id="703e71ee" data-element_type="container">
+          <div class="elementor-element elementor-element-cc324f7 elementor-widget elementor-widget-heading" data-id="cc324f7" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h4 class="elementor-heading-title elementor-size-default">Contact Information</h4>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-34e47d6 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="34e47d6" data-element_type="widget" data-widget_type="icon-list.default">
+            <div class="elementor-widget-container">
+              <ul class="elementor-icon-list-items">
+                <li class="elementor-icon-list-item"><span class="elementor-icon-list-icon"><svg aria-hidden="true" class="e-font-icon-svg e-fas-phone-volume" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z"></path></svg></span><span class="elementor-icon-list-text">{{ replace site.Data.settings.phone "-" " " }}</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="elementor-element elementor-element-5bb0512 e-grid-align-left e-grid-align-mobile-left elementor-shape-circle elementor-widget__width-inherit elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="5bb0512" data-element_type="widget" data-widget_type="social-icons.default">
+            <div class="elementor-widget-container">
+              <div class="elementor-social-icons-wrapper elementor-grid">
+                <span class="elementor-grid-item">
+                  <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-0267196" href="{{ site.Data.settings.facebook_url }}" target="_blank">
+                    <span class="elementor-screen-only">Facebook-f</span>
+                    <svg class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="site-footer__meta">
-    <div class="container">
-      <p>Copyright © 2024 Amwell Valley Conservancy, All rights reserved.</p>
+  <div class="elementor-element elementor-element-58d1d51 e-flex e-con-boxed e-con e-parent" data-id="58d1d51" data-element_type="container" data-settings='{"background_background":"classic"}'>
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-f68cefb e-con-full e-flex e-con e-child" data-id="f68cefb" data-element_type="container">
+        <div class="elementor-element elementor-element-791bcb5 elementor-widget__width-inherit elementor-widget elementor-widget-heading" data-id="791bcb5" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container">
+            <div class="elementor-heading-title elementor-size-default">Copyright © 2024 Amwell Valley Conservancy, All rights reserved.</div>
+          </div>
+        </div>
+      </div>
+      <div class="elementor-element elementor-element-18ecf36 e-con-full e-flex e-con e-child" data-id="18ecf36" data-element_type="container"></div>
     </div>
   </div>
-</footer>
-
+</div>

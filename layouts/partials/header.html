@@ -1,35 +1,74 @@
-<header class="site-header">
-  <div class="container site-header__inner">
-    <a class="site-brand" href="/" aria-label="{{ site.Data.settings.site_name | default .Site.Title }}">
-      <span>{{ site.Data.settings.site_name | default .Site.Title }}</span>
-    </a>
-
-    <div class="site-header__actions">
-      <a
-        class="site-header__social"
-        href="{{ site.Data.settings.facebook_url }}"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Visit Amwell Valley Conservancy on Facebook"
-      >
-        <svg viewBox="0 0 320 512" aria-hidden="true">
-          <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path>
-        </svg>
-      </a>
-      <button
-        class="nav-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="site-navigation"
-        data-nav-toggle
-      >
-        <span class="sr-only">Toggle navigation</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      {{ partial "nav.html" . }}
+<div data-elementor-type="header" data-elementor-id="293" class="elementor elementor-293 elementor-location-header" data-elementor-post-type="elementor_library">
+  <div class="elementor-element elementor-element-76c90a2e e-flex e-con-boxed e-con e-parent" data-id="76c90a2e" data-element_type="container" data-settings='{"background_background":"classic"}'>
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-6dd68664 e-con-full e-flex e-con e-child" data-id="6dd68664" data-element_type="container">
+        <div class="elementor-element elementor-element-746a85eb elementor-icon-list--layout-inline elementor-tablet-align-right elementor-mobile-align-center elementor-widget-mobile__width-inherit elementor-align-right elementor-widget__width-auto elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="746a85eb" data-element_type="widget" data-widget_type="icon-list.default">
+          <div class="elementor-widget-container">
+            <ul class="elementor-icon-list-items elementor-inline-items">
+              <li class="elementor-icon-list-item elementor-inline-item"><span class="elementor-icon-list-text"></span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="elementor-element elementor-element-3d5a1003 elementor-shape-circle elementor-hidden-mobile elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="3d5a1003" data-element_type="widget" data-widget_type="social-icons.default">
+          <div class="elementor-widget-container">
+            <div class="elementor-social-icons-wrapper elementor-grid">
+              <span class="elementor-grid-item">
+                <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-pop elementor-repeater-item-2c89b30" href="{{ site.Data.settings.facebook_url }}" target="_blank">
+                  <span class="elementor-screen-only">Facebook-f</span>
+                  <svg class="e-font-icon-svg e-fab-facebook-f" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</header>
-
+  <div class="elementor-element elementor-element-4c405522 elementor-hidden-desktop e-flex e-con-boxed e-con e-parent" data-id="4c405522" data-element_type="container">
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-6c1dee9b e-con-full e-flex e-con e-child" data-id="6c1dee9b" data-element_type="container">
+        <div class="elementor-element elementor-element-2207934 elementor-widget elementor-widget-heading" data-id="2207934" data-element_type="widget" data-widget_type="heading.default">
+          <div class="elementor-widget-container">
+            <h1 class="elementor-heading-title elementor-size-default">Amwell 
+Valley
+Conservancy</h1>
+          </div>
+        </div>
+      </div>
+      <div class="elementor-element elementor-element-707ee0ce e-con-full e-flex e-con e-child" data-id="707ee0ce" data-element_type="container">
+        <div class="elementor-element elementor-element-4fe75b6e elementor-nav-menu--stretch elementor-nav-menu__align-end elementor-widget__width-inherit elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="4fe75b6e" data-element_type="widget" data-settings='{"submenu_icon":{"value":"<svg class=\"e-font-icon-svg e-fas-angle-down\" viewBox=\"0 0 320 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\"></path></svg>","library":"fa-solid"},"full_width":"stretch","layout":"horizontal","toggle":"burger"}' data-widget_type="nav-menu.default">
+          <div class="elementor-widget-container">
+            <nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+              {{ partial "nav.html" (dict "page" . "id" "menu-1-4fe75b6e") }}
+            </nav>
+            <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+              <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open ti-menu"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close ti-close"></i><span class="elementor-screen-only">Menu</span>
+            </div>
+            <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+              {{ partial "nav.html" (dict "page" . "id" "menu-2-4fe75b6e" "dropdown" true) }}
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="elementor-element elementor-element-4149782 elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed e-con e-parent" data-id="4149782" data-element_type="container">
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-4ab713c e-con-full e-flex e-con e-child" data-id="4ab713c" data-element_type="container">
+        <div class="elementor-element elementor-element-c4cc048 elementor-nav-menu--stretch elementor-nav-menu__align-center elementor-widget__width-inherit elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="c4cc048" data-element_type="widget" data-settings='{"submenu_icon":{"value":"<svg class=\"e-font-icon-svg e-fas-angle-down\" viewBox=\"0 0 320 512\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z\"></path></svg>","library":"fa-solid"},"full_width":"stretch","layout":"horizontal","toggle":"burger"}' data-widget_type="nav-menu.default">
+          <div class="elementor-widget-container">
+            <nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+              {{ partial "nav.html" (dict "page" . "id" "menu-1-c4cc048") }}
+            </nav>
+            <div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+              <i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open ti-menu"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close ti-close"></i><span class="elementor-screen-only">Menu</span>
+            </div>
+            <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+              {{ partial "nav.html" (dict "page" . "id" "menu-2-c4cc048" "dropdown" true) }}
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,26 +1,26 @@
+{{ $page := .page }}
+{{ $dropdown := .dropdown | default false }}
+{{ $id := .id }}
 {{ $items := slice
-  (dict "label" "Home" "url" "/")
-  (dict "label" "Content Directory" "url" "/content-directory/")
-  (dict "label" "Calendar of Events" "url" "/calendar-of-events/")
-  (dict "label" "Club Rules" "url" "/club-rules/")
-  (dict "label" "Bird Hunting" "url" "/bird-hunting-safety-rules/")
-  (dict "label" "Membership" "url" "/membership-categories/")
-  (dict "label" "Other Privileges" "url" "/other-hunting-privileges/")
-  (dict "label" "Fields Map" "url" "/fields-map/")
+  (dict "name" "Home" "url" "/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-285" "active" "menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-283 current_page_item menu-item-285")
+  (dict "name" "Content Directory" "url" "/content-directory/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-1188" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-853 current_page_item menu-item-1188")
+  (dict "name" "Calendar of Events" "url" "/calendar-of-events/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-370" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-370 current_page_item menu-item-370")
+  (dict "name" "Club Rules" "url" "/club-rules/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-369" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-355 current_page_item menu-item-369")
+  (dict "name" "Bird Hunting" "url" "/bird-hunting-safety-rules/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-368" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-357 current_page_item menu-item-368")
+  (dict "name" "Membership" "url" "/membership-categories/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-367" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-359 current_page_item menu-item-367")
+  (dict "name" "Other Privileges" "url" "/other-hunting-privileges/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-366" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-361 current_page_item menu-item-366")
+  (dict "name" "Fields Map" "url" "/fields-map/" "inactive" "menu-item menu-item-type-post_type menu-item-object-page menu-item-365" "active" "menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-363 current_page_item menu-item-365")
 }}
-<nav class="site-nav" id="site-navigation" data-site-nav data-open="false" aria-label="Primary navigation">
-  <ul class="site-nav__list">
-    {{ range $item := $items }}
-      {{ $active := false }}
-      {{ if eq $item.url "/" }}
-        {{ $active = $.IsHome }}
-      {{ else if hasPrefix $.RelPermalink $item.url }}
-        {{ $active = true }}
-      {{ end }}
-      <li>
-        <a class="{{ if $active }}is-active{{ end }}" href="{{ $item.url }}">{{ $item.label }}</a>
-      </li>
+<ul id="{{ $id }}" class="elementor-nav-menu">
+  {{ range $items }}
+    {{ $isActive := false }}
+    {{ if eq .url "/" }}
+      {{ $isActive = $page.IsHome }}
+    {{ else if and (eq .url "/content-directory/") (or (eq $page.RelPermalink "/content-directory/") (eq $page.RelPermalink "/contents-directory/")) }}
+      {{ $isActive = true }}
+    {{ else if eq $page.RelPermalink .url }}
+      {{ $isActive = true }}
     {{ end }}
-  </ul>
-</nav>
-
+    <li class="{{ if $isActive }}{{ .active }}{{ else }}{{ .inactive }}{{ end }}"><a href="{{ .url }}"{{ if $isActive }} aria-current="page"{{ end }} class="elementor-item{{ if $isActive }} elementor-item-active{{ end }}"{{ if $dropdown }} tabindex="-1"{{ end }}>{{ .name }}</a></li>
+  {{ end }}
+</ul>

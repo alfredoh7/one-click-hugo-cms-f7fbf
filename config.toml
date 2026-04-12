@@ -2,9 +2,10 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Amwell Valley Conservancy"
 enableRobotsTXT = true
+disableHugoGeneratorInject = true
+disableKinds = ["taxonomy", "term", "RSS"]
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
