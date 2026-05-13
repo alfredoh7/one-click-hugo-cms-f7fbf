@@ -3,8 +3,8 @@ title: Calendar of Events
 type: calendar
 season_heading: Calendar of Events - Dates To Remember for 2025-2026 Season
 events:
-  - date: 2026-05-13
-    details: testing event
+  - date: 2026-10-10
+    details: testing event here is what it looks like
   - date: 2025-10-01
     details: Waitlist posted in Clubhouse
   - date: 2025-10-04
