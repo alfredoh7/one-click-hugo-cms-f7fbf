@@ -48,10 +48,12 @@ collections:
           - label: Events
             name: events
             widget: list
+            add_to_top: true
+            allow_reorder: true
             summary: "{{fields.date}} - {{fields.details}}"
-            hint: Add, remove, reorder, or edit event dates here. The public page automatically creates the calendar icon list.
+            hint: Add, remove, drag to reorder, or edit event dates here. New events are added to the top of this list.
             fields:
-              - { label: Event Date, name: date, widget: date, format: YYYY-MM-DD, picker_utc: true }
+              - { label: Event Date, name: date, widget: datetime, date_format: YYYY-MM-DD, time_format: false, picker_utc: true }
               - { label: Event Details, name: details, widget: markdown, minimal: true }
           - { label: Footer Note, name: footer_note, widget: string, required: false }
       - label: Club Rules
