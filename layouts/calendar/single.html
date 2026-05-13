@@ -1,0 +1,67 @@
+{{ define "main" }}
+<div data-elementor-type="wp-page" data-elementor-id="353" class="elementor elementor-353" data-elementor-post-type="page">
+  <div class="elementor-element elementor-element-6ea59536 e-flex e-con-boxed e-con e-parent" data-id="6ea59536" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-52a6b58b e-flex e-con-boxed e-con e-child" data-id="52a6b58b" data-element_type="container">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-2bbf64d6 elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-heading" data-id="2bbf64d6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h1 class="elementor-heading-title elementor-size-default">{{ .Title }}</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="elementor-element elementor-element-289c250 e-flex e-con-boxed e-con e-parent" data-id="289c250" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+    <div class="e-con-inner">
+      <div class="elementor-element elementor-element-853daab e-flex e-con-boxed e-con e-child" data-id="853daab" data-element_type="container">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-b14bde3 elementor-widget elementor-widget-heading" data-id="b14bde3" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+              <h2 class="elementor-heading-title elementor-size-default">{{ .Params.season_heading }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="elementor-element elementor-element-f1f55d8 e-flex e-con-boxed e-con e-child" data-id="f1f55d8" data-element_type="container">
+        <div class="e-con-inner">
+          <div class="elementor-element elementor-element-787e887 e-con-full e-flex e-con e-child" data-id="787e887" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-element elementor-element-63d5bf5 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="63d5bf5" data-element_type="widget" data-widget_type="icon-list.default">
+              <div class="elementor-widget-container">
+                <ul class="elementor-icon-list-items">
+                  {{ range .Params.events }}
+                    {{ $eventDate := "" }}
+                    {{ with .date }}
+                      {{ $eventDate = (time.AsTime .).Format "1-2-06" }}
+                    {{ end }}
+                    {{ $details := .details | markdownify }}
+                    {{ $details = replaceRE "^<p>(.*)</p>\\n?$" "$1" $details }}
+                    <li class="elementor-icon-list-item">
+                      <span class="elementor-icon-list-icon">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-calendar-alt" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg>
+                      </span>
+                      <span class="elementor-icon-list-text"><b>{{ $eventDate }}: </b>{{ $details | safeHTML }}</span>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ with .Params.footer_note }}
+    <div class="elementor-element elementor-element-c39a963 e-flex e-con-boxed e-con e-parent" data-id="c39a963" data-element_type="container">
+      <div class="e-con-inner">
+        <div class="elementor-element elementor-element-a65cc21 elementor-widget elementor-widget-text-editor" data-id="a65cc21" data-element_type="widget" data-widget_type="text-editor.default">
+          <div class="elementor-widget-container">
+            <p>{{ . }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
+{{ end }}
