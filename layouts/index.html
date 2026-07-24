@@ -7,9 +7,82 @@
   {{ if ge (len $privacyParagraphs) 2 }}{{ $privacyMiddle = index $privacyParagraphs 1 }}{{ end }}
   {{ if ge (len $privacyParagraphs) 3 }}{{ $privacyTail = index $privacyParagraphs 2 }}{{ end }}
   {{ $heroCTA := replaceRE "^/" "" (.Params.hero_cta_url | default "calendar-of-events/") }}
-  {{ $staffImage1 := .Params.staff_image_1 | default "wp-content/uploads/2025/03/mike.jpg" }}
-  {{ $staffImage2 := .Params.staff_image_2 | default "wp-content/uploads/2025/08/new-worker.jpg" }}
   <div data-elementor-type="wp-page" data-elementor-id="283" class="elementor elementor-283" data-elementor-post-type="page">
+  <style id="avc-staff-cards-css">
+    .elementor-283 .avc-staff-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 34px 30px;
+      width: 100%;
+    }
+
+    .elementor-283 .avc-staff-card {
+      color: #202020;
+      font-family: "Sarabun", Sans-serif;
+      text-align: center;
+    }
+
+    .elementor-283 .avc-staff-card__photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 377 / 435;
+      object-fit: cover;
+      object-position: center center;
+      border: 1px solid #222222;
+      margin: 0 auto 20px;
+    }
+
+    .elementor-283 .avc-staff-card__role {
+      display: inline-block;
+      margin: 0 0 5px;
+      color: #202020;
+      font-size: clamp(18px, 2.1vw, 26px);
+      font-weight: 700;
+      line-height: 1.1;
+      text-decoration-line: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+
+    .elementor-283 .avc-staff-card__name,
+    .elementor-283 .avc-staff-card__spouse,
+    .elementor-283 .avc-staff-card__phone,
+    .elementor-283 .avc-staff-card__email {
+      margin: 0;
+      color: #202020;
+      font-size: clamp(17px, 1.9vw, 24px);
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    .elementor-283 .avc-staff-card__phone a,
+    .elementor-283 .avc-staff-card__email a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .elementor-283 .avc-staff-card__email {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 1024px) {
+      .elementor-283 .avc-staff-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 767px) {
+      .elementor-283 .avc-staff-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .elementor-283 .avc-staff-card {
+        max-width: 380px;
+        margin: 0 auto;
+      }
+    }
+  </style>
 				<div class="elementor-element elementor-element-2cf4d88 e-flex e-con-boxed e-con e-parent" data-id="2cf4d88" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-ddb3caa e-con-full e-flex e-con e-child" data-id="ddb3caa" data-element_type="container">
@@ -128,16 +201,18 @@
 		<div class="elementor-element elementor-element-4e0060ff e-flex e-con-boxed e-con e-child" data-id="4e0060ff" data-element_type="container">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-17a9d8cf e-con-full e-flex e-con e-child" data-id="17a9d8cf" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-501a0af elementor-widget elementor-widget-image" data-id="501a0af" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img decoding="async" width="956" height="630" src="{{ $staffImage1 }}" class="attachment-full size-full wp-image-1136" alt="" sizes="(max-width: 956px) 100vw, 956px" />															</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-76ce9170 e-con-full e-flex e-con e-child" data-id="76ce9170" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-				<div class="elementor-element elementor-element-5dd232b elementor-widget elementor-widget-image" data-id="5dd232b" data-element_type="widget" data-widget_type="image.default">
-				<div class="elementor-widget-container">
-															<img decoding="async" width="934" height="624" src="{{ $staffImage2 }}" class="attachment-full size-full wp-image-1319" alt="" sizes="(max-width: 934px) 100vw, 934px" />															</div>
-				</div>
+				<div class="avc-staff-grid">
+{{ range .Params.staff_members }}					<figure class="avc-staff-card">
+						<img decoding="async" src="{{ .image }}" class="avc-staff-card__photo" alt="{{ .name }}" />
+						<figcaption>
+							<p class="avc-staff-card__role">{{ .role }}</p>
+							<p class="avc-staff-card__name">{{ .name }}</p>
+{{ with .spouse }}							<p class="avc-staff-card__spouse">({{ . }})</p>
+{{ end }}{{ with .phone }}							<p class="avc-staff-card__phone"><a href="tel:{{ replaceRE `[^0-9+]` `` . }}">C: {{ . }}</a></p>
+{{ end }}{{ with .email }}							<p class="avc-staff-card__email"><a href="mailto:{{ . }}">Email: {{ . }}</a></p>
+{{ end }}						</figcaption>
+					</figure>
+{{ end }}				</div>
 				</div>
 					</div>
 				</div>

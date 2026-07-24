@@ -29,8 +29,17 @@ collections:
             fields:
               - { label: Name, name: name, widget: string }
               - { label: Role, name: role, widget: string }
-          - { label: Staff Image 1, name: staff_image_1, widget: image }
-          - { label: Staff Image 2, name: staff_image_2, widget: image }
+          - label: Staff Members
+            name: staff_members
+            widget: list
+            summary: "{{fields.role}} - {{fields.name}}"
+            fields:
+              - { label: Role, name: role, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Spouse or Partner Name, name: spouse, widget: string, required: false }
+              - { label: Cell Phone, name: phone, widget: string, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Headshot, name: image, widget: image }
           - { label: Body, name: body, widget: markdown, required: false }
       - label: Content Directory
         name: content_directory

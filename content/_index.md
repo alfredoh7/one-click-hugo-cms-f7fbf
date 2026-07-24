@@ -40,8 +40,26 @@ board_members:
     role: Human Resources, Information Management, & Club Handbook
   - name: Jim Murphy
     role: House & Grounds
-staff_image_1: wp-content/uploads/2025/03/mike.jpg
-staff_image_2: wp-content/uploads/2025/08/new-worker.jpg
+staff_members:
+  - role: Club Manager
+    name: Mike Lorenzi
+    spouse: Jennifer
+    phone: 609-377-0004
+    email: managerAVC@outlook.com
+    image: /images/staff/mike-lorenzi.jpg
+  - role: Assistant Manager
+    name: Luke MacDade
+    spouse: Julie
+    phone: 908-399-6473
+    image: /images/staff/luke-macdade.jpg
+  - role: Staff Associate
+    name: James Clark (Bubba)
+    phone: 267-826-2109
+    image: /images/staff/james-clark.jpg
+  - role: Staff Associate
+    name: Nick Carbohn
+    phone: 267-342-2009
+    image: /images/staff/nick-carbohn.jpg
 ---
 <div data-elementor-type="wp-page" data-elementor-id="283" class="elementor elementor-283" data-elementor-post-type="page">
 				<div class="elementor-element elementor-element-2cf4d88 e-flex e-con-boxed e-con e-parent" data-id="2cf4d88" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
