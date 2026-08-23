@@ -13,7 +13,7 @@ events:
       included. Sign up by September 7th, via text or email.
   - date: 2026-10-04
     details: "Opening picnic: Fun clays start 9:00 AM, lunch served at 12:30 PM.
-      Cost $TBD pp. Kids under 12 free. Register by September 26th."
+      Cost $40 pp. Kids under 12 free. Register by September 26th."
   - date: 2026-11-07
     details: Club duck shoot. 600 duck release. 10:00 AM start. Cost per gun $TBD.
       Includes lunch & bird processing. Shells <strong><u>NOT</u></strong>
@@ -21,8 +21,7 @@ events:
   - date: 2026-11-15
     details: Predator trapping begins at the club.
   - date: 2026-11-26
-    details: "Opening picnic: Fun clays start 9:00 AM, lunch served at 12:30 PM.
-      Cost $40 pp. Kids under 12 free. Register by September 26th."
+    details: Thanksgiving Day, club closes at noon.
   - date: 2026-11-27
     details: Black Friday pheasant tower release. 750 birds. Includes lunch, 3 boxes
       of shells and bird processing. Start 10:00 AM SHARP, lunch at noon. Cost
