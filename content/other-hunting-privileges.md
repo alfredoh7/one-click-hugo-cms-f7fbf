@@ -1,5 +1,5 @@
 ---
-title: "Other Hunting Privileges"
+title: Other Hunting Privileges
 ---
 <div data-elementor-type="wp-page" data-elementor-id="361" class="elementor elementor-361" data-elementor-post-type="page">
 				<div class="elementor-element elementor-element-3b79626 e-flex e-con-boxed e-con e-parent" data-id="3b79626" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -48,7 +48,7 @@ Codes and the additional AVC rules as follow below.								</div>
 				<div class="elementor-widget-container">
 									<b>Deer Hunting Tree Stand Safety Agreement</b>								</div>
 				</div>
-				<div class="elementor-element elementor-element-b76ee39 elementor-align-left elementor-mobile-align-left elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="b76ee39" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-b76ee39 elementor-align-left elementor-mobile-align-left elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="b76ee39" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2025/09/DEER-HUNTING-TREESTAND-SAFETY-AGREEMENT.pdf" target="_blank">
@@ -107,7 +107,7 @@ approves a special group hunt to help manage the overall deer population.							
 							<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-circle" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">Up to a maximum of seven (7) does in total across the various State of NJ approved seasons. The Shooting Committee will monitor the Doe population and may make in-season harvest adjustments.</span>
+										<span class="elementor-icon-list-text">Up to a maximum of four (4) does in total across the various State of NJ approved seasons. The Shooting Committee will monitor the Doe population and may make in-season harvest adjustments.</span>
 									</li>
 								<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
@@ -413,7 +413,7 @@ Committee approves a special group hunt.								</div>
 				<div class="elementor-widget-container">
 									<p>Adult Guest Fishing Release</p><p>(18 years old and older)</p>								</div>
 				</div>
-				<div class="elementor-element elementor-element-4eb10533 elementor-align-center elementor-mobile-align-center elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="4eb10533" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-4eb10533 elementor-align-center elementor-mobile-align-center elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="4eb10533" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2025/05/Attachment-5-Adult-Guest-Release-for-Fishing-at-AVC-1-1.pdf" target="_blank">
@@ -430,7 +430,7 @@ Committee approves a special group hunt.								</div>
 				<div class="elementor-widget-container">
 									<p>Minor Guest Fishing Release </p><p>(17 years and younger)</p>								</div>
 				</div>
-				<div class="elementor-element elementor-element-1a302f75 elementor-align-center elementor-mobile-align-center elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="1a302f75" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-1a302f75 elementor-align-center elementor-mobile-align-center elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="1a302f75" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2025/06/minor-release-for-fishing.pdf" target="_blank">
