@@ -1,5 +1,5 @@
 ---
-title: "Bird Hunting Safety Rules"
+title: Bird Hunting Safety Rules
 ---
 <div data-elementor-type="wp-page" data-elementor-id="357" class="elementor elementor-357" data-elementor-post-type="page">
 				<div class="elementor-element elementor-element-c0c77a7 e-flex e-con-boxed e-con e-parent" data-id="c0c77a7" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -382,7 +382,7 @@ only or higher. 								</div>
 				</div>
 				<div class="elementor-element elementor-element-3ba88cd elementor-widget elementor-widget-text-editor" data-id="3ba88cd" data-element_type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									<p>No shots are to be taken over or behind the blind or line of fire. No ducks are to be shot at between rounds. All shot shall be NON-TOXIC only. Shot size shall be no larger than #3 and shell length no longer than 3 inches. </p><p>Guns must be fully unloaded and breaches open when moving between blinds and are to be reloaded only at the sound to reload.</p><p><br />PERSONS VIOLATING THESE SAFTY RULES WILL BE REMOVED FROM PARTICIPATING IN THE SHOOT WITH THE FORFEITURE OF THEIR ENTRY FEE.</p>								</div>
+									<p>No shots are to be taken over or behind the blind or line of fire. No ducks are to be shot at between rounds. All shot shall be NON-TOXIC only. Shot size shall be no larger than #2 and shell length no longer than 3 inches. </p><p>Guns must be fully unloaded and breaches open when moving between blinds and are to be reloaded only at the sound to reload.</p><p><br />PERSONS VIOLATING THESE SAFTY RULES WILL BE REMOVED FROM PARTICIPATING IN THE SHOOT WITH THE FORFEITURE OF THEIR ENTRY FEE.</p>								</div>
 				</div>
 				</div>
 					</div>
@@ -470,7 +470,7 @@ resulting from the guest’s use of the Club.								</div>
 				<div class="elementor-widget-container">
 									<p>Adult Agreement &amp; Registration Form </p><p>(18 years and older)</p>								</div>
 				</div>
-				<div class="elementor-element elementor-element-7ccb8ce elementor-align-center elementor-mobile-align-center elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="7ccb8ce" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-7ccb8ce elementor-align-center elementor-mobile-align-center elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="7ccb8ce" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2024/09/Guest-Agreement-And-Registration-Form.pdf" target="_blank">
@@ -487,7 +487,7 @@ resulting from the guest’s use of the Club.								</div>
 				<div class="elementor-widget-container">
 									<p>Minor Guest Release Form&nbsp;</p><p>(17 years and younger)</p>								</div>
 				</div>
-				<div class="elementor-element elementor-element-5083813 elementor-align-center elementor-mobile-align-center elementor-widget__width-inherit elementor-widget-mobile__width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="5083813" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-5083813 elementor-align-center elementor-mobile-align-center elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="5083813" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2025/04/Minor-Guest-Release-Amwell.pdf" target="_blank">
