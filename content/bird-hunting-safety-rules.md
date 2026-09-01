@@ -82,7 +82,7 @@ fields								</div>
 							<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
 							<svg aria-hidden="true" class="e-font-icon-svg e-fas-check-square" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M400 480H48c-26.51 0-48-21.49-48-48V80c0-26.51 21.49-48 48-48h352c26.51 0 48 21.49 48 48v352c0 26.51-21.49 48-48 48zm-204.686-98.059l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.248-16.379-6.249-22.628 0L184 302.745l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.25 16.379 6.25 22.628.001z"></path></svg>						</span>
-										<span class="elementor-icon-list-text">The largest shot size shall be # 3.</span>
+										<span class="elementor-icon-list-text">The largest shot size shall be # 2.</span>
 									</li>
 								<li class="elementor-icon-list-item">
 											<span class="elementor-icon-list-icon">
@@ -470,7 +470,7 @@ resulting from the guest’s use of the Club.								</div>
 				<div class="elementor-widget-container">
 									<p>Adult Agreement &amp; Registration Form </p><p>(18 years and older)</p>								</div>
 				</div>
-				<div class="elementor-element elementor-element-7ccb8ce elementor-align-center elementor-mobile-align-center elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="7ccb8ce" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-7ccb8ce elementor-align-center elementor-mobile-align-center elementor-widget\_\\_width-inherit elementor-widget-mobile\\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="7ccb8ce" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2024/09/Guest-Agreement-And-Registration-Form.pdf" target="_blank">
@@ -487,7 +487,7 @@ resulting from the guest’s use of the Club.								</div>
 				<div class="elementor-widget-container">
 									<p>Minor Guest Release Form&nbsp;</p><p>(17 years and younger)</p>								</div>
 				</div>
-				<div class="elementor-element elementor-element-5083813 elementor-align-center elementor-mobile-align-center elementor-widget\_\_width-inherit elementor-widget-mobile\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="5083813" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
+				<div class="elementor-element elementor-element-5083813 elementor-align-center elementor-mobile-align-center elementor-widget\_\\_width-inherit elementor-widget-mobile\\_\_width-inherit elementor-invisible elementor-widget elementor-widget-button" data-id="5083813" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
 					<a class="elementor-button elementor-button-link elementor-size-md" href="../wp-content/uploads/2025/04/Minor-Guest-Release-Amwell.pdf" target="_blank">
