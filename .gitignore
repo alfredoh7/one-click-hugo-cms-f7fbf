@@ -1,5 +1,5 @@
 public/
-dist/
+/dist/
 resources/
 source-export/
 node_modules/
