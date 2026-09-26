@@ -4,3 +4,4 @@ resources/
 source-export/
 node_modules/
 .hugo_build.lock
+.wrangler/

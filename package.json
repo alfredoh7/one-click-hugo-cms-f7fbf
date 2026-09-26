@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "build": "npx -y hugo-bin -d dist",
+    "build:cloudflare": "npx -y hugo-bin --baseURL https://amwellvalley.pages.dev/ --destination public",
+    "deploy:cloudflare": "npm run build:cloudflare && npx --yes wrangler@4.141.0 pages deploy public --project-name amwellvalley --branch main",
     "start": "npx -y hugo-bin server"
   }
 }
