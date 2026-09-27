@@ -12,7 +12,7 @@ events:
       Includes lunch & bird processing. Shells <strong><u>NOT</u></strong>
       included. Sign up by September 7th, via text or email.
   - date: 2026-10-04
-    details: "Opening picnic: Fun clays start 9:00 AM, lunch served at 12:30 PM.
+    details: "Opening picnic: Fun clays start 8:00 AM, lunch served at 12:30 PM.
       Cost $40 pp. Kids under 12 free. Register by September 26th."
   - date: 2026-11-07
     details: Club duck shoot. 600 duck release. 10:00 AM start. Cost per gun $TBD.
