@@ -6,21 +6,8 @@
     <title>AVC Content Manager</title>
   </head>
   <body>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-        window.netlifyIdentity.init({
-          APIUrl: "https://amwellvalley.netlify.app/.netlify/identity"
-        });
-      }
-    </script>
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="/admin/email-backend.js"></script>
   </body>
 </html>

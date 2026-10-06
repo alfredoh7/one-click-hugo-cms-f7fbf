@@ -290,7 +290,6 @@ html.avc-gate-locked .avc-site-gate {
   var ekit_config = {"ajaxurl":"https://www.amwellvalley.site/wp-admin/admin-ajax.php","nonce":"ef99d1957c"};
 </script>
 <script src="/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js" id="elementskit-elementor-js"></script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <script>
   (() => {
     if (window.location.pathname.startsWith("/admin")) {
@@ -361,18 +360,6 @@ html.avc-gate-locked .avc-site-gate {
     });
   })();
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", (user) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-    window.netlifyIdentity.init({
-      APIUrl: "https://amwellvalley.netlify.app/.netlify/identity"
-    });
-  }
 </script>
 </body>
 </html>
