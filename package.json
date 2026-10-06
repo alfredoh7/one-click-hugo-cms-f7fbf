@@ -1,6 +1,8 @@
 {
   "name": "amwell-valley-conservancy",
   "private": true,
+  "type": "module",
+  "dependencies": { "jose": "6.1.3" },
   "scripts": {
     "build": "npx -y hugo-bin -d dist",
     "build:cloudflare": "npx -y hugo-bin --baseURL https://amwellvalley.pages.dev/ --destination public",
