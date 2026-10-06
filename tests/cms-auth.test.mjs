@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import { generateKeyPair, SignJWT, jwtVerify } from 'jose';
-import { editor, validatePublish, writablePath, readableRoute, publish } from '../lib/cms-email.mjs';
+import { editor, validatePublish, writablePath, readableRoute, publish, github } from '../lib/cms-email.mjs';
 
 const env = { CF_ACCESS_TEAM_DOMAIN: 'avc-test.cloudflareaccess.com', CF_ACCESS_AUD: 'app-audience', CMS_GITHUB_TOKEN: 'test-only' };
 const authRequest = new Request('https://amwellvalley.pages.dev/api/session', { headers: { 'Cf-Access-Jwt-Assertion': 'test-jwt' } });
@@ -49,6 +49,12 @@ test('publishing requires same-origin JSON and valid nonduplicated files', () =>
 test('proxy permits read operations only and no administrative endpoints', () => {
   assert.equal(readableRoute('/git/trees/main:static/images'), true);
   for (const path of ['/actions/secrets', '/hooks', '/collaborators', '/git/refs/heads/main']) assert.equal(readableRoute(path), false);
+});
+test('GitHub transport uses edge-compatible manual redirects and refuses redirect responses', async () => {
+  await assert.rejects(github(env, '', {}, async (url, options) => {
+    assert.equal(options.redirect, 'manual');
+    return new Response(null, { status: 302, headers: { Location: 'https://other.example' } });
+  }), { status: 502 });
 });
 test('publish creates a content-only commit with editor attribution and never force-pushes', async () => {
   const calls = [];
