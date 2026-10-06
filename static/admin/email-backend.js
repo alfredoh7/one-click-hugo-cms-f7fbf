@@ -17,8 +17,10 @@
       this.setState({ busy: true, error: '' });
       try {
         await request('/api/session');
-        this.props.onLogin({ token: 'email-session' });
+        await request('/api/github/repos/alfredoh7/one-click-hugo-cms-f7fbf');
+        await this.props.onLogin({ token: 'email-session' });
       } catch (error) { this.setState({ busy: false, error: error.message }); }
+      finally { this.setState({ busy: false }); }
     },
     render() {
       return h('div', { style: { maxWidth: 420, margin: '80px auto', padding: 32, fontFamily: 'sans-serif' } },
